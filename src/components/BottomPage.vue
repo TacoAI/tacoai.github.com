@@ -1,5 +1,17 @@
 <template>
-  <v-container>
+    <v-container id="bottom-page" fluid class="d-flex">
+    <v-row no-gutters class="align-self-start hideOnLandscape">
+      <div class="bottom-page-top-cirlce">
+          <!-- max-height="20vh" -->
+        <v-img
+          contain
+          src="../assets/2-half-circle-down-black.png"
+        ></v-img> 
+      </div>
+    </v-row>
+  </v-container>
+
+  <!--<v-container id="bottom-page" fluid>
     <v-row class="text-center">
       <v-col cols="6">
         <v-img
@@ -9,7 +21,7 @@
           height="200"
         />
       </v-col>
-      <v-col cols="6">
+       <v-col cols="6">
         <p>
           From building personalized user experiences to virtual assistants for back-office automation, TacoAI reduces scaling costs throughout the Prosperum ecosystem.
         </p>
@@ -21,9 +33,9 @@
         </p>
       </v-col>
 
-      
+       
     </v-row>
-  </v-container>
+  </v-container>-->
 </template>
 
 <script>
@@ -33,3 +45,32 @@
     data: () => ({}),
   }
 </script>
+
+<style >
+  #bottom-page{
+    background-color: white;
+    height: 100vh;
+    min-height: calc(100vw/2.3);
+    padding: 0px 0px;
+  }
+  .bottom-page-top-cirlce{
+    width: 100vw;
+    max-width: 50vh;
+    /* height: 12vw; */
+    /* background: pink; */
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-aspect-ratio: 2/3) {
+    .hideOnLandscape {
+        display: none;
+    }
+  }
+  /* @media only screen and (orientation : portrait) { */
+  @media (max-aspect-ratio: 2/3) {
+    .hideOnPortrait {
+        display: none;
+    }
+  }
+</style>
