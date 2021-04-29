@@ -1,6 +1,6 @@
 # tacoai.github.com
-www [Configuration Reference](https://tacoai.netlify.app).
-coming soon on [Configuration Reference](https://tacoai.com).
+[WWW](https://tacoai.netlify.app)
+[coming soon on](https://tacoai.com)
 
 ## Project setup
 ```
