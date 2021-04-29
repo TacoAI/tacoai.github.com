@@ -1,6 +1,5 @@
 # tacoai.github.com
 [WWW](https://tacoai.netlify.app)
-[coming soon on](https://tacoai.com)
 
 ## Project setup
 ```
