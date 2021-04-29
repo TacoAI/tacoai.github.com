@@ -88,8 +88,7 @@
           </v-btn>
       </div>
         <v-img 
-          contain
-
+  
           src="../assets/2-half-circle-up-white.svg"></v-img>
       </div>
   </v-container>
