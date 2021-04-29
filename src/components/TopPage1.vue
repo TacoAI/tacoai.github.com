@@ -4,7 +4,7 @@
       <v-spacer></v-spacer>
       <v-col cols="7" align-self="center">
         <div>
-          <v-img src="../assets/tacoAiTopLogo.svg" />
+          <v-img src="../assets/1-taco-logo-portrait.png" />
         </div>
       </v-col>
       <v-spacer></v-spacer>
@@ -35,18 +35,20 @@
       <v-col 
         :cols="aspectRatio > 2/3 ? '6': '12'"
         :class="aspectRatio >2/3 ? 'order-2' : 'order-1'"
-        class="white--text">
+        class="robo-taco-col">
+        <div class="robot-taco-image">
         <v-img
-          class="robot-taco-image"
+          
           src="../assets/robot-taco-clear.png"/>
+        </div>
       </v-col>
         <!-- :class="{'custom2cols': aspectRatio > 2/3}"  -->
       <v-col 
         :cols="aspectRatio > 2/3 ? '6': '12'"
         :class="aspectRatio >2/3 ? 'order-1' : 'order-2'">
         <div 
-          class="d-flex align-content-space-around flex-wrap white--text"
-          :class="aspectRatio >2/3 ? 'text-marging-onlandscape':'text-center mx-14'">
+          class="pitch d-flex align-content-space-around flex-wrap white--text"
+          :class="aspectRatio >2/3 ? 'text-marging-onlandscape':'text-center'">
           <div>
             <div 
               class="main-title">
@@ -59,7 +61,8 @@
               experience.
             </div>
           </div>
-          <div>
+          <div
+            class="hideOnPortrait">
             <v-btn
                 :large="aspectRatio>2/3 ? true:false"
                 class="text-capitalize body-text text-h6 font-weight-light grey darken-3 grey--text"
@@ -72,11 +75,20 @@
     </v-row>
     <!-- <v-row no-gutters>
       <v-col style="background:gray"> -->
-      <div class="top-page-bottom-circle">
+
+      <div class="top-page-bottom-circle">      
+        <div
+        class="contact-button hideOnLandscape">
+          <v-btn
+              :large="aspectRatio>2/3 ? true:false"
+              class="text-capitalize body-text text-h6 font-weight-light black--text"
+            >
+            Contact Us
+          </v-btn>
+      </div>
         <v-img 
           contain
-          max-width="40vw"
-          max-height="25vh"
+
           src="../assets/2-half-circle-up-white.svg"></v-img>
       </div>
       <!-- </v-col>
@@ -114,63 +126,22 @@ export default {
 </script>
 
 <style scoped>
+.robo-taco-col{
+  position: relative;
+}
 .side-logo{
   margin-top: 4vh;
 }
 .top-page-main{
   height: 80vh;
 }
-.text-marging-onlandscape{
-  margin-left: 4vw;
-  height: 75vh;
-}
-.main-title{
-  font-size: 5vw;
-  font-family:'Montserrat';
-  line-height: 1.1;
-  margin-bottom: 3vh;
-  margin-top: calc(0.3vh*7);
-}
-.body-text{
-  font-family:'Roboto';
-  font-size: 2vw;
-  line-height: 1.3
-}
-.robot-taco-image {
-  transform: rotate(-28deg);
-  position: absolute;
-  width:90vh;
-  max-width: 70vw;
-  bottom: -2vh;
-  right: -10vw;
-  /* background-color: grey;
-  max-height: 90vh; */
-}
+
+
+
 .top-page-up-circle {
   filter: invert(1);
 }
-.top-page-bottom-circle .v-image{
-  /* height: 30vh; */
-  position: absolute;
-  bottom: 0;
-  width: 100vw;
-}
-.top-page-bottom-circle {
-  position: absolute;
-  /* display: block; */
-  z-index: 1;
-  bottom: 0;
-  left:40vw;
-  height: 30vh;
-  /* background: blue; */
-  /* height: 20vh; */
-  width:50vw
-  /* max-width: 50vh; */
-  /* height: 12vw; */
-  /* background: pink; */
-  /* margin-right: auto;
-  margin-left: auto; */
-}
+
 /* .btn-contact-us{
     position: absolute;
     z-index: 9999;
@@ -214,24 +185,57 @@ export default {
     margin-left: 40vw;
     margin-right: auto;
   } */
-  .robot-taco-image {
+  /* .robot-taco-image {
     transform: rotate(-0deg);
+  } */
+  .text-marging-onlandscape{
+  margin-left: 4vw;
+  height: 75vh;
+}
+.robot-taco-image {
+  /* transform: rotate(-0deg); */
+  position: absolute;
+  width:90vh;
+  max-width: 70vw;
+  bottom: -1vh;
+  right: -10vw;
+  /* background-color: grey;
+  max-height: 90vh; */
+}
+ .robot-taco-image .v-image{
+    transform: rotate(0deg);
   }
   /* .custom2cols {
     width: 50%;
     max-width: 50%;
     flex-basis: 50%;
   } */
+
+  /* .pitch{
+    margin-top: -100px;
+  } */
+  .main-title{
+    font-size: calc(15vw*0.3);
+    font-family:'Montserrat';
+    line-height: 1.1;
+    margin-bottom: 3vh;
+    margin-top: calc(3vw*0.7);
+  }
+  .body-text{
+    font-family:'Roboto';
+    font-size: calc(6vw*0.3);
+    line-height: 1.3
+  }
+
+.top-page-bottom-circle .v-image{
+  /* height: 30vh; */
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+            max-width:40vw;
+          max-height:25vh;
 }
-/* @media only screen and (orientation : portrait) { */
-@media (max-aspect-ratio: 2/3) {
-  .hideOnPortrait {
-    display: none;
-  }
-  .robot-taco-image{
-    position: relative;
-  }
-  .top-page-bottom-circle {
+.top-page-bottom-circle {
   position: absolute;
   /* display: block; */
   z-index: 1;
@@ -240,14 +244,84 @@ export default {
   height: 30vh;
   /* background: blue; */
   /* height: 20vh; */
-  width:50vw;
+  width:50vw
   /* max-width: 50vh; */
   /* height: 12vw; */
   /* background: pink; */
   /* margin-right: auto;
   margin-left: auto; */
-    width: 100vw;
-    max-width: 50vh;
 }
+
+}
+
+@media (max-aspect-ratio: 2/3) {
+  .hideOnPortrait {
+    display: none;
+  }
+  .robot-taco-image{
+    margin-top: 5vh;
+    margin-left: 6vw;
+    max-height: 48vh;
+  }
+  .robot-taco-image .v-image{
+    transform: rotate(-28deg);
+    width: 95vw;
+    max-width: 53vh;
+  }
+  .pitch{
+    margin-top:-11vh;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .main-title{
+    font-size: 7vw;
+    font-family:'Montserrat';
+    line-height: 1.1;
+    margin-bottom: 2vh;
+  }
+  .body-text{
+    font-family:'Roboto';
+    font-size: 4vw;
+    line-height: 1.3
+  }
+
+  .top-page-bottom-circle .v-image{
+  /* height: 30vh; */
+  /* position: absolute;
+  bottom: 0; */
+  width: 100vw;
+  max-width: 50vh;
+  margin-right: auto;
+  margin-left: auto;
+}
+.top-page-bottom-circle {
+  position: absolute;
+  /* display: block; */
+  z-index: 1;
+  bottom: 0;
+  /* left:40vw; */
+  /* height: 30vh; */
+  /* background: blue; */
+  /* height: 20vh; */
+  width:100vw
+  /* max-width: 50vh; */
+  /* height: 12vw; */
+  /* background: pink; */
+  /* margin-right: auto;
+  margin-left: auto; */
+}
+  .contact-button{
+    z-index: 10;
+    position: absolute;
+    bottom: 10vh;
+    width: 100vw;
+  }
+  .contact-button .v-btn{
+      margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  }
 }
 </style>
