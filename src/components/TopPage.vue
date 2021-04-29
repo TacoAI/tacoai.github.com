@@ -213,11 +213,11 @@ export default {
   }
   .body-text{
     font-family:'Roboto';
-    font-size: 4vw;
+    font-size: 4.5vw;
     line-height: 1.3
   }
   .top-page-bottom-circle .v-image{
-    width: 100vw;
+    width: 90vw;
     max-width: 50vh;
     margin-right: auto;
     margin-left: auto;
@@ -236,7 +236,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 15vh;
+    height: 12vh;
   }
 }
 </style>

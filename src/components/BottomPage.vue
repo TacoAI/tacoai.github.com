@@ -8,7 +8,7 @@
     </div>
     <v-row no-gutters>
         <div
-          class="body-text mt-2">
+          class="body-text mt-4">
           From building personalized user experiences to virtual assistants for back-office automation, TacoAI reduces scaling costs throughout the Prosperum ecosystem.
         </div>
         <div class="bottom-page-taco-image">
@@ -64,7 +64,7 @@
 
     }
     .bottom-page-top-cirlce .v-image{
-      width:100vw;
+      width:90vw;
       max-width:50vh;
       margin-right: auto;
       margin-left: auto;
@@ -72,17 +72,17 @@
 
     .body-text{
       font-family:'Roboto';
-      font-size: 4vw;
+      font-size: 4.2vw;
       line-height: 2.4vh;
-      margin-left: 4vw;
-      margin-right: 4vw;
+      margin-left: 5vw;
+      margin-right: 5vw;
     }
     .bottom-page-taco-image{
       width:100vw
     }
     .bottom-page-taco-image .v-image{
       width:100vw;
-      max-width:50vh;
+      max-width:45vh;
       margin-right: auto;
       margin-left: auto;
     }
