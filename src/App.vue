@@ -1,16 +1,14 @@
 <template>
   <v-app id="app">
     <v-main>
-      <!-- <TopPage/> -->
-      <TopPage1/>
+      <TopPage/>
       <BottomPage/>
     </v-main>
   </v-app>
 </template>
 
 <script>
-// import TopPage from './components/TopPage';
-import TopPage1 from './components/TopPage1';
+import TopPage from './components/TopPage';
 import BottomPage from './components/BottomPage';
 
 
@@ -18,8 +16,7 @@ export default {
   name: 'App',
 
   components: {
-    // TopPage,
-    TopPage1,
+    TopPage,
     BottomPage
   },
 

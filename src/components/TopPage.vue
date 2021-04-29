@@ -1,175 +1,243 @@
 <template>
-  <v-container id="top-page" fluid class="d-flex fill-height">
-    <v-container class="d-flex " style="background-color: blue">  
-    </v-container>
-
-    <!-- <v-row align="start" no-gutters justify="start">
-      <v-col cols="7"> -->
-        <!-- <v-row> -->
-          <!-- <v-col align-self="start" class="hideOnPortrait">
-          <v-row justify="start" >
-            <svg width="297" height="109" viewBox="0 0 297 109" fill="none" >
-            <rect x="-73" width="370" height="109" rx="45" fill="white"/>
-            <image x="55" y="-45" xlink:href="../assets/taco-logo.png" height="200" width="200"/>
-            </svg>
-          </v-row>
-          </v-col> -->
-
-
-          <!-- <v-col align-self="center" class="hideOnLandscape">
-                    <div id="circle1">
-                        <v-img href="../assets/taco-logo.png"/>
-                    </div>
-          </v-col> -->
-
-
-          <!-- <v-col align-self="start">
-          <v-row align="start" no-gutters> -->
-          <!-- <v-col class="hideOnLandscape"> -->
-            <!-- <TacoLogoPortrait/> -->
-            <!-- <v-spacer></v-spacer> -->
-            <!-- <TacoLogoMathPortrait/> -->
-            <!-- <v-spacer></v-spacer> -->
-          <!-- </v-col> -->
-          <!-- </v-row>
-          </v-col> -->
-          <!--<v-col align-self="start">
-             <v-img
-              fill-height
-              contain
-              max-width="677"
-              src="../assets/bottom-math-circle-white.png"
-            ></v-img> 
-          </v-col>--> 
-          
-      <!-- </v-row> -->
-      <!-- <v-row class="align-self-stretch">
-<v-col cols="5">
+  <v-container 
+    id="top-page" 
+    fluid>
+    <v-row 
+      no-gutters 
+      class="hideOnLandscape">
+      <v-spacer></v-spacer>
+      <v-col 
+        cols="7" 
+        align-self="center">
+        <div>
+          <v-img src="../assets/tacoAiTopLogo.svg" />
+        </div>
+      </v-col>
+      <v-spacer></v-spacer>
+    </v-row>
+    <v-row no-gutters class="hideOnPortrait">
+      <v-col
+        cols="3"
+        align-self="start">
+        <v-img
+          class="side-logo"
+          position="start" 
+          contain
+          max-height="10vh"          
+          src="../assets/tacoAiSideLogo.svg"/>
+      </v-col>
+      <v-col>
+          <v-img
+            class="top-page-up-circle ml-8"
+            position="start"
+            contain
+            max-width="45vw"
+            max-height="25vh"
+            src="../assets/2-half-circle-down-black.svg" />
+      </v-col>
+    </v-row>
+    <v-row no-gutters class="top-page-main mt-n8">
+      <v-col 
+        :cols="aspectRatio > 2/3 ? '6': '12'"
+        :class="aspectRatio >2/3 ? 'order-2' : 'order-1'"
+        class="robo-taco-col">
+        <div class="robot-taco-image">
         <v-img
           
-          width="100%"
-          
-          src="../assets/robot-taco-clear.png"
-        ></v-img>
+          src="../assets/robot-taco-clear.png"/>
+        </div>
       </v-col>
-
-      </v-row> -->
-      <v-row style="background-color: coral">
-        <v-col>
-          <!-- <div>
-          <v-btn class="text-capitalize">
+      <v-col 
+        :cols="aspectRatio > 2/3 ? '6': '12'"
+        :class="aspectRatio >2/3 ? 'order-1' : 'order-2'">
+        <div 
+          class="pitch d-flex align-content-space-around flex-wrap white--text"
+          :class="aspectRatio >2/3 ? 'text-marging-onlandscape':'text-center'">
+          <div>
+            <div 
+              class="main-title">
+              Building Tools for the FinTech Revolution
+            </div>
+            <div 
+              class="body-text">
+              Using cutting edge artificial intelligence and natural language
+              processing, TacoAI creates a unique client and professional trading
+              experience.
+            </div>
+          </div>
+          <div
+            class="hideOnPortrait">
+            <v-btn
+                :large="aspectRatio>2/3 ? true:false"
+                class="text-capitalize body-text text-h6 font-weight-light grey darken-3 grey--text"
+              >
+                Contact Us
+              </v-btn>
+          </div>
+        </div>
+      </v-col>
+    </v-row>
+      <div class="top-page-bottom-circle">      
+        <div
+        class="contact-button hideOnLandscape">
+          <v-btn
+              :large="aspectRatio>2/3 ? true:false"
+              class="text-capitalize body-text text-h6 font-weight-light black--text"
+            >
             Contact Us
           </v-btn>
-            </div>  -->
-          <div class="bottom-image-container">
-          <v-img
-            contain
-
-            src="../assets/top-math-circle-white.png"
-          ></v-img>
-            </div> 
-        </v-col>
-      </v-row>
-        <!-- <v-row justify="center">
-          <v-col align-self="center">
-            <h1>
-              Building Tools for the FinTech Revolution
-            </h1>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col>
-            <h3>
-              Using cutting edge artifical intelligence and natural language processing, TacoAI builds tools for the FinTech revolution.
-            </h3>
-          </v-col>
-        </v-row> -->
-      <!-- </v-col> -->
-       <!-- <v-col cols="5">
-        <v-img
+      </div>
+        <v-img 
           contain
-          width="100%"
-          
-          src="../assets/robot-taco-clear.png"
-        ></v-img>
-      </v-col> -->
-     
-    <!-- </v-row> -->
-  </v-container>
- <!--  <v-container> 
-    <v-row class="text-center">
-      <v-col cols="6">
-        <v-img
-          src="../assets/nlu-taco.png"
-        />
-      </v-col>
-      <v-col cols="6">
-        <p>
-          From building personalized user experiences to virtual assistants for back-office automation, TacoAI reduces scaling costs throughout the Prosperum ecosystem.
-        </p>
-        <p>
-          Built on top of and extending Microsoft technologies, Taco AI provides a new client experience and connects data from multiple streams to unify the Prosperum back-office infrastructure.
-        </p>
-        <p>
-          Taco AI is now building out chatbot systems for customer service, a revolutionary AI-powered trading experience, and creating an insights engine to glean connections between data.
-        </p>
-      </v-col>
 
-      
-    </v-row>
-  </v-container> -->
+          src="../assets/2-half-circle-up-white.svg"></v-img>
+      </div>
+  </v-container>
 </template>
 
 <script>
-// import TacoLogoPortrait from "./icons/TacoLogoPortrait"
-// import TacoLogoMathPortrait from "./icons/TacoLogoMathPortrait"
-  export default {
-    name: 'TopPage',
-    components: {
-      // TacoLogoPortrait,
-      // TacoLogoMathPortrait,
-
-    },
-    data: () => ({}),
+export default {
+  name: "TopPage",
+  components: {
+  },
+  data: () => ({
+   aspectRatio:0
+  }),
+  created() {
+    window.addEventListener("resize", this.aspectRatioHandler);
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.aspectRatioHandler);
+  },
+  mounted() {
+    this.aspectRatioHandler()
+  },
+  methods: {
+    aspectRatioHandler () {
+      this.aspectRatio = window.innerWidth / window.innerHeight
+    }
   }
+};
 </script>
 
 <style scoped>
-  #top-page{
+  .robo-taco-col{
+    position: relative;
+  }
+  .side-logo{
+    margin-top: 4vh;
+  }
+  .top-page-main{
+    height: 80vh;
+  }
+  .top-page-up-circle {
+    filter: invert(1);
+  }
+  #top-page {
+    position: relative;
     background-color: black;
     height: 100vh;
+    min-height: calc(100vw / 2.3);
     padding: 0px 0px;
   }
-  .bottom-image-container{
-    max-height: 250px;
-    margin-left: auto;
+@media (min-aspect-ratio: 2/3) {
+  .hideOnLandscape {
+    display: none;
+  }
+  .text-marging-onlandscape{
+    margin-left: 4vw;
+    height: 75vh;
+  }
+  .robot-taco-image {
+    position: absolute;
+    width:90vh;
+    max-width: 70vw;
+    bottom: -1vh;
+    right: -10vw;
+  }
+ .robot-taco-image .v-image{
+    transform: rotate(0deg);
+  }
+  .main-title{
+    font-size: calc(15vw*0.3);
+    font-family:'Montserrat';
+    line-height: 1.1;
+    margin-bottom: 3vh;
+    margin-top: calc(3vw*0.7);
+  }
+  .body-text{
+    font-family:'Roboto';
+    font-size: calc(6vw*0.3);
+    line-height: 1.3
+  }
+  .top-page-bottom-circle .v-image{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    max-width:40vw;
+    max-height:25vh;
+  }
+  .top-page-bottom-circle {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left:40vw;
+    height: 30vh;
+    width:50vw
+  }
+}
+
+@media (max-aspect-ratio: 2/3) {
+  .hideOnPortrait {
+    display: none;
+  }
+  .robot-taco-image{
+    margin-top: 5vh;
+    margin-left: 6vw;
+    max-height: 48vh;
+  }
+  .robot-taco-image .v-image{
+    transform: rotate(-20deg);
+    width: 95vw;
+    max-width: 53vh;
+  }
+  .pitch{
+    margin-top:-11vh;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+  .main-title{
+    font-size: 7vw;
+    font-family:'Montserrat';
+    line-height: 1.1;
+    margin-bottom: 2vh;
+  }
+  .body-text{
+    font-family:'Roboto';
+    font-size: 4vw;
+    line-height: 1.3
+  }
+  .top-page-bottom-circle .v-image{
+    width: 100vw;
+    max-width: 50vh;
     margin-right: auto;
-    width: 100vw
+    margin-left: auto;
   }
-  /* h1 {
-    font-size: 86px;
-    width: 90%;
-    line-height: 1; */
-    /* margin: 0 !important; */
-  /* } */
-
-  /* h3 {
-    font-size: 42px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: lighter;
-    line-height: 1;
-    left: 20vw;  } */
-  /* @media only screen and (min-device-width : 768px) and (orientation : landscape) { */
-  @media (min-aspect-ratio: 2/3) {
-      .hideOnLandscape {
-          display: none;
-      }
+  .top-page-bottom-circle {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    width:100vw
   }
-  /* @media only screen and (orientation : portrait) { */
-  @media (max-aspect-ratio: 2/3) {
-    .hideOnPortrait {
-        display: none;
-    }
+  .contact-button{
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    width: 100vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
   }
-
+}
 </style>
