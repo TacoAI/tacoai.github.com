@@ -1,8 +1,8 @@
 <template>
   <v-app id="app">
     <v-main>
-      <TopPage/>
-      <BottomPage/>
+      <TopPage :aspectRatio="aspectRatio"/>
+      <BottomPage :aspectRatio='aspectRatio'/>
     </v-main>
   </v-app>
 </template>
@@ -19,10 +19,24 @@ export default {
     TopPage,
     BottomPage
   },
-
   data: () => ({
-    //
+    aspectRatio:0
   }),
+  created() {
+    window.addEventListener("resize", this.aspectRatioHandler);
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.aspectRatioHandler);
+  },
+  mounted() {
+    this.aspectRatioHandler()
+  },
+  methods: {
+    aspectRatioHandler () {
+      this.aspectRatio = window.innerWidth / window.innerHeight
+    }
+  }
+
 };
 </script>
 

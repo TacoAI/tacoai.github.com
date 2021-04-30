@@ -1,37 +1,59 @@
 <template>
-  <v-container id="bottom-page" fluid>
-    <div class="bottom-page-top-cirlce hideOnLandscape">
+  <v-container 
+    fluid 
+    id="bottom-page" 
+    class="d-flex"
+    :class="aspectRatio<2/3
+      ?'flex-column justify-space-between'
+      :'flex-column flex-wrap justify-center'">
+    <div 
+      class="bottom-page-top-cirlce hideOnLandscape">
       <v-img
         contain
         src="../assets/2-half-circle-down-black.png"
       ></v-img> 
     </div>
-    <v-row no-gutters>
-        <div
-          class="body-text mt-4">
-          From building personalized user experiences to virtual assistants for back-office automation, TacoAI reduces scaling costs throughout the Prosperum ecosystem.
-        </div>
-        <div class="bottom-page-taco-image">
-          <v-img
-            src="../assets/singletaco.png"/>
-        </div>  
-        <div
-          class="body-text">
-          Built on top of and extending Microsoft technologies, Taco AI provides a new client experience and connects data from multiple streams to unify the Prosperum back-office infrastructure.
-        </div>
-        <div
-          class="body-text mt-2">
-          Taco AI is now building out chatbot systems for customer service, a revolutionary AI-powered trading experience, and creating an insights engine to glean connections between data.
-        </div>
-    </v-row>
+      <div
+        class="body-text-bp "
+        :class="aspectRatio<2/3
+        ?'mt-2'
+        :'order-2'">
+        From building personalized user experiences to virtual assistants for back-office automation, TacoAI reduces scaling costs throughout the Prosperum ecosystem.
+      </div>
+      <div 
+        class="bottom-page-taco-image"
+        :class="aspectRatio<2/3
+        ?''
+        :'order-1 d-flex align-center'">
+        <v-img
+          src="../assets/singletaco.png"/>
+      </div>  
+      <div
+        class="body-text-bp"
+        :class="aspectRatio<2/3
+        ?''
+        :'order-3'">
+        Built on top of and extending Microsoft technologies, Taco AI provides a new client experience and connects data from multiple streams to unify the Prosperum back-office infrastructure.
+      </div>
+      <div
+        class="body-text-bp"
+        :class="aspectRatio<2/3
+          ?'mb-6'
+          :'order-4'">
+        Taco AI is now building out chatbot systems for customer service, a revolutionary AI-powered trading experience, and creating an insights engine to glean connections between data.
+      </div>
   </v-container>
 </template>
 
-<script>
+<script scoped>
   export default {
     name: 'BottomPage',
-
-    data: () => ({}),
+    props: {
+      aspectRatio:{
+        type: Number,
+        required: true
+      },
+    }
   }
 </script>
 
@@ -43,25 +65,39 @@
     padding: 0px 0px;
   }
 
-
+  /* orientation : landscape*/
   @media (min-aspect-ratio: 2/3) {
     .hideOnLandscape {
         display: none;
     }
-      .body-text{
-    font-family:'Roboto';
-    font-size: calc(6vw*0.3);
-    line-height: 1.3
+    .body-text-bp{
+      font-family:'Roboto';
+      font-size: 2vw;
+      line-height: 1.3;
+      width:50vw;
+      padding-left: 3vh;
+      padding-right: 5vw;
+      padding-top: 2vh;
+      padding-bottom: 2vh;
+    }
+    .bottom-page-taco-image{
+      min-width:50vw;
+      height: 100vh;
+    }
+    .bottom-page-taco-image .v-image{
+      width:50vw;
+      max-width:100vh;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
   }
-  }
-  /* @media only screen and (orientation : portrait) { */
+  /* orientation : portrait*/
   @media (max-aspect-ratio: 2/3) {
     .hideOnPortrait {
         display: none;
     }
     .bottom-page-top-cirlce{
       width: 100vw;
-
     }
     .bottom-page-top-cirlce .v-image{
       width:90vw;
@@ -69,11 +105,10 @@
       margin-right: auto;
       margin-left: auto;
     }
-
-    .body-text{
+    .body-text-bp{
       font-family:'Roboto';
-      font-size: 4.2vw;
-      line-height: 2.4vh;
+      font-size: 4vw;
+      line-height: 2.6vh;
       margin-left: 5vw;
       margin-right: 5vw;
     }

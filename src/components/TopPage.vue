@@ -65,8 +65,7 @@
               experience.
             </div>
           </div>
-          <div
-            class="hideOnPortrait">
+          <div class="hideOnPortrait">
             <v-btn
                 :large="aspectRatio>2/3 ? true:false"
                 class="text-capitalize body-text text-h6 font-weight-light grey darken-3 grey--text"
@@ -78,18 +77,16 @@
       </v-col>
     </v-row>
       <div class="top-page-bottom-circle">      
-        <div
-        class="contact-button hideOnLandscape">
+        <div class="contact-button hideOnLandscape">
           <v-btn
               :large="aspectRatio>2/3 ? true:false"
               class="text-capitalize body-text text-h6 font-weight-light black--text"
             >
-            Contact Us
+              Contact Us
           </v-btn>
       </div>
         <v-img 
-  
-          src="../assets/2-half-circle-up-white.svg"></v-img>
+          src="../assets/2-half-circle-up-white.svg"/>
       </div>
   </v-container>
 </template>
@@ -97,24 +94,11 @@
 <script>
 export default {
   name: "TopPage",
-  components: {
-  },
-  data: () => ({
-   aspectRatio:0
-  }),
-  created() {
-    window.addEventListener("resize", this.aspectRatioHandler);
-  },
-  destroyed() {
-    window.removeEventListener("resize", this.aspectRatioHandler);
-  },
-  mounted() {
-    this.aspectRatioHandler()
-  },
-  methods: {
-    aspectRatioHandler () {
-      this.aspectRatio = window.innerWidth / window.innerHeight
-    }
+  props: {
+    aspectRatio:{
+      type: Number,
+      required: true
+    },
   }
 };
 </script>
@@ -158,7 +142,7 @@ export default {
     transform: rotate(0deg);
   }
   .main-title{
-    font-size: calc(15vw*0.3);
+    font-size: 4.5vw;
     font-family:'Montserrat';
     line-height: 1.1;
     margin-bottom: 3vh;
@@ -166,7 +150,7 @@ export default {
   }
   .body-text{
     font-family:'Roboto';
-    font-size: calc(6vw*0.3);
+    font-size: 2vw;
     line-height: 1.3
   }
   .top-page-bottom-circle .v-image{
@@ -201,7 +185,7 @@ export default {
     max-width: 53vh;
   }
   .pitch{
-    margin-top:-11vh;
+    margin-top:-13vh;
     margin-right: 30px;
     margin-left: 30px;
   }
