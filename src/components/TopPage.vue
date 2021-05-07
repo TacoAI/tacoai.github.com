@@ -69,6 +69,7 @@
             <v-btn
                 :large="aspectRatio>2/3 ? true:false"
                 class="text-capitalize body-text text-h6 font-weight-light grey darken-3 grey--text"
+                href="mailto:info@prosperumholdings.com"
               >
                 Contact Us
               </v-btn>
