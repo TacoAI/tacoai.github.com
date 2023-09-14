@@ -67,13 +67,25 @@
           </div>
           <div class="hideOnPortrait">
             <v-btn
+              :large="aspectRatio>2/3 ? true:false"
+              class="text-capitalize body-text text-h6 font-weight-light grey darken-3 grey--text"
+              href="mailto:info@prosperumholdings.com"
+              >
+              Contact Us
+            </v-btn>
+          </div>
+          <div class="page-text">
+              View our award winning AI-enabled stock and options trading platform through our sister company, Avant-Garde.
+          </div>
+          <div class="hideOnPortrait">
+            <v-btn
                 :large="aspectRatio>2/3 ? true:false"
                 class="text-capitalize body-text text-h6 font-weight-light grey darken-3 grey--text"
-                href="mailto:info@prosperumholdings.com"
+                href="https://www.avantgardetrading.com/"
               >
-                Contact Us
-              </v-btn>
-          </div>
+                Start Trading
+            </v-btn>
+          </div> 
         </div>
       </v-col>
     </v-row>
@@ -152,6 +164,11 @@ export default {
   .body-text{
     font-family:'Roboto';
     font-size: 2vw;
+    line-height: 1.3
+  }
+  .page-text{
+    font-family:'Roboto';
+    font-size: 1.5vw;
     line-height: 1.3
   }
   .top-page-bottom-circle .v-image{
