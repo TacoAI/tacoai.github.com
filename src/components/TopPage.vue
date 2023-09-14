@@ -74,6 +74,7 @@
               Contact Us
             </v-btn>
           </div>
+
           <div class="page-text">
               View our award winning AI-enabled stock and options trading platform through our sister company, Avant-Garde.
           </div>
@@ -85,6 +86,7 @@
               >
                 Start Trading
             </v-btn>
+            
           </div> 
         </div>
       </v-col>
